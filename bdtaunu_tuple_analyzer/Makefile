@@ -34,7 +34,7 @@ CUSTOM_CPP_UTIL_ROOT = /Users/dchao/bdtaunu/v4/custom_cpp_utilities
 INCFLAGS += -I$(CUSTOM_CPP_UTIL_ROOT)
 
 # particle data file
-PDT_FILE_PATHNAME = $(shell pwd | sed 's/\/[^/]*$$//')/meta/pdt.dat
+PDT_FILE_PATHNAME = $(shell pwd | sed 's/\/[^/]*$$//')/cached/pdt.dat
 CXXFLAGS += -D__PDT_FILE_PATHNAME='"$(PDT_FILE_PATHNAME)"'
 
 # Build Rules
