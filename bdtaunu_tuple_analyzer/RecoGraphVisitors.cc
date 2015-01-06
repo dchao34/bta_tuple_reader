@@ -188,13 +188,13 @@ void RecoGraphDfsVisitor::AnalyzeB(const Vertex &u, const Graph &g) {
       case bdtaunu::DcLund:
       case bdtaunu::Dstar0Lund:
       case bdtaunu::DstarcLund:
-        recoB.D = &(manager->D_map)[*ai];
+        recoB.d = &(manager->D_map)[*ai];
         break;
       case bdtaunu::eLund:
       case bdtaunu::muLund:
       case bdtaunu::piLund:
       case bdtaunu::rhoLund:
-        recoB.Lepton = &(manager->Lepton_map)[*ai];
+        recoB.lepton = &(manager->Lepton_map)[*ai];
         break;
       default:
         assert(false);
@@ -222,7 +222,7 @@ void RecoGraphDfsVisitor::AnalyzeY(const Vertex &u, const Graph &g) {
     switch (lund) {
       case bdtaunu::B0Lund:
       case bdtaunu::BcLund:
-        if ((manager->B_map)[*ai].Lepton->l_block_idx >= 0) {
+        if ((manager->B_map)[*ai].lepton->l_block_idx >= 0) {
           recoY.tagB = &(manager->B_map)[*ai];
         } else {
           recoY.sigB = &(manager->B_map)[*ai];

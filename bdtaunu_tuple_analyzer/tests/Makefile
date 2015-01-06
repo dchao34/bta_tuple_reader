@@ -29,6 +29,9 @@ INCFLAGS += -I$(CUSTOM_CPP_UTIL_ROOT)
 INCFLAGS += $(shell root-config --cflags)
 LDFLAGS += $(shell root-config --libs)
 
+# boost
+INCFLAGS += -I$(BOOST_ROOT)
+
 # Build Rules
 # -----------
 

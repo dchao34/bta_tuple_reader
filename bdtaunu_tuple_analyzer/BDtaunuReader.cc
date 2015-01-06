@@ -381,10 +381,10 @@ void BDtaunuReader::FillRecoInfo() {
     ups.set_tag_deltaM(YTagBDstarDeltaM[i]);
     ups.set_tag_cosThetaDSoft(YTagBCosThetaDSoftCM[i]);
     ups.set_tag_softP3MagCM(YTagBsoftP3MagCM[i]);
-    ups.set_tag_d_mode(reco_graph_manager.get_recoY(i)->tagB->D->D_mode);
-    ups.set_tag_dstar_mode(reco_graph_manager.get_recoY(i)->tagB->D->Dstar_mode);
-    ups.set_l_ePidMap(eSelectorsMap[lTrkIdx[reco_graph_manager.get_recoY(i)->tagB->Lepton->l_block_idx]]);
-    ups.set_l_muPidMap(muSelectorsMap[lTrkIdx[reco_graph_manager.get_recoY(i)->tagB->Lepton->l_block_idx]]);
+    ups.set_tag_d_mode(reco_graph_manager.get_recoY(i)->tagB->d->D_mode);
+    ups.set_tag_dstar_mode(reco_graph_manager.get_recoY(i)->tagB->d->Dstar_mode);
+    ups.set_l_ePidMap(eSelectorsMap[lTrkIdx[reco_graph_manager.get_recoY(i)->tagB->lepton->l_block_idx]]);
+    ups.set_l_muPidMap(muSelectorsMap[lTrkIdx[reco_graph_manager.get_recoY(i)->tagB->lepton->l_block_idx]]);
     ups.set_sig_hp3(YSigBhP3MagCM[i]);
     ups.set_sig_cosBY(YSigBCosBY[i]);
     ups.set_sig_cosThetaDtau(YSigBCosThetaDtauCM[i]);
@@ -395,11 +395,11 @@ void BDtaunuReader::FillRecoInfo() {
     ups.set_sig_softP3MagCM(YSigBsoftP3MagCM[i]);
     ups.set_sig_hmass(YSigBhMass[i]);
     ups.set_sig_vtxh(YSigBVtxProbh[i]);
-    ups.set_sig_d_mode(reco_graph_manager.get_recoY(i)->sigB->D->D_mode);
-    ups.set_sig_dstar_mode(reco_graph_manager.get_recoY(i)->sigB->D->Dstar_mode);
-    ups.set_sig_tau_mode(reco_graph_manager.get_recoY(i)->sigB->Lepton->tau_mode);
-    ups.set_h_ePidMap(eSelectorsMap[hTrkIdx[reco_graph_manager.get_recoY(i)->sigB->Lepton->pi_block_idx]]);
-    ups.set_h_muPidMap(muSelectorsMap[hTrkIdx[reco_graph_manager.get_recoY(i)->sigB->Lepton->pi_block_idx]]);
+    ups.set_sig_d_mode(reco_graph_manager.get_recoY(i)->sigB->d->D_mode);
+    ups.set_sig_dstar_mode(reco_graph_manager.get_recoY(i)->sigB->d->Dstar_mode);
+    ups.set_sig_tau_mode(reco_graph_manager.get_recoY(i)->sigB->lepton->tau_mode);
+    ups.set_h_ePidMap(eSelectorsMap[hTrkIdx[reco_graph_manager.get_recoY(i)->sigB->lepton->pi_block_idx]]);
+    ups.set_h_muPidMap(muSelectorsMap[hTrkIdx[reco_graph_manager.get_recoY(i)->sigB->lepton->pi_block_idx]]);
 
     upsilon_candidates.push_back(ups);
   }

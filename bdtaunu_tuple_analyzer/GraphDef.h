@@ -79,8 +79,8 @@ struct D {
 struct B {
   B() = default;
   bdtaunu::BFlavor flavor = bdtaunu::BFlavor::null;
-  D *D = nullptr;
-  Lepton *Lepton = nullptr;
+  D *d = nullptr;
+  Lepton *lepton = nullptr;
 };
 
 //! Data attached to vertices of reconstructed \f$\Upsilon(4S)\f$ mesons. 
